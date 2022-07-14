@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import ButtonNavbar from "./UI/ButtonNavbar";
 import SvgButton from "./UI/SvgButton";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [visibleMenu, setVisibleMenu] = useState(false);
   return (
-    <div className="fixed top-0 w-[100%]">
+    <div className="fixed top-0 w-[100%] z-10">
       <div className="relative">
         <div
           className={
@@ -16,11 +17,11 @@ const NavBar = () => {
         >
           <ul className="flex flex-col justify-center">
             <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
-              خانه
+              <NavLink to="/">خانه</NavLink>
             </li>
 
             <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
-              رزومه ها
+              <NavLink to="resumes">رزومه ها</NavLink>
             </li>
             <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
               رزومه ساز
@@ -35,7 +36,10 @@ const NavBar = () => {
               درباره ما
             </li>
           </ul>
-          <button className="border py-2 rounded-lg" onClick={() => setVisibleMenu(false)}>
+          <button
+            className="border py-2 rounded-lg"
+            onClick={() => setVisibleMenu(false)}
+          >
             بستن
           </button>
         </div>
@@ -76,14 +80,68 @@ const NavBar = () => {
               />
             </div>
           </div>
-          <div className="flex">
-            <ButtonNavbar title="خانه" />
-            <ButtonNavbar title="رزومه ها" />
-            <ButtonNavbar title="رزومه ساز" />
-            <ButtonNavbar title="جستجوی پیشرفته" />
-            <ButtonNavbar title="درباره ما" />
-            <ButtonNavbar title="  راهنما" />
-          </div>
+          <ul className="flex text-white">
+            <li className="text-[15px] lg:mx-1 cursor-pointer hover:bg-orange-600 py-[5px] px-[7px] rounded-lg transition duration-200 ease-out ">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "font-bold border-b" : ""
+                }
+                to="/"
+              >
+                خانه
+              </NavLink>
+            </li>
+            <li className="text-[15px] lg:mx-1 cursor-pointer hover:bg-orange-600 py-[5px] px-[7px] rounded-lg transition duration-200 ease-out ">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "font-bold border-b" : ""
+                }
+                to="resumes"
+              >
+                رزومه ها
+              </NavLink>
+            </li>
+            <li className="text-[15px] lg:mx-1 cursor-pointer hover:bg-orange-600 py-[5px] px-[7px] rounded-lg transition duration-200 ease-out ">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "font-bold border-b" : ""
+                }
+                to="a"
+              >
+                رزومه ساز
+              </NavLink>
+            </li>
+            <li className="text-[15px] lg:mx-1 cursor-pointer hover:bg-orange-600 py-[5px] px-[7px] rounded-lg transition duration-200 ease-out ">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "font-bold border-b" : ""
+                }
+                to="a"
+              >
+                جستجوی پیشرفته
+              </NavLink>
+            </li>
+            <li className="text-[15px] lg:mx-1 cursor-pointer hover:bg-orange-600 py-[5px] px-[7px] rounded-lg transition duration-200 ease-out ">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "font-bold border-b" : ""
+                }
+                to="a"
+              >
+                درباره ما
+              </NavLink>
+            </li>
+            <li className="text-[15px] lg:mx-1 cursor-pointer hover:bg-orange-600 py-[5px] px-[7px] rounded-lg transition duration-200 ease-out ">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "font-bold border-b" : ""
+                }
+                to="a"
+              >
+                راهنما
+              </NavLink>
+            </li>
+          </ul>
           <div className="flex text-white items-center ">
             <SvgButton data="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             <h1 className="text-[22px] ml-2">رزومه یاب</h1>
