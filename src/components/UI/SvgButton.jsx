@@ -1,12 +1,11 @@
 import React from "react";
 
 const SvgButton = ({ data, size }) => {
-  //const result = `w-${size} h-${size}`;
-  const result = `w-${size} h-${size}`;
+  
   return (
     <div>
       <svg
-        class={result}
+        class="w-6 h-6"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
