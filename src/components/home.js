@@ -9,7 +9,7 @@ const Home = () => {
         <div className="absolute w-full h-full bg-gradient-to-l from-slate-900 " />
         <img
           className="w-full h-[100vh] object-cover "
-          src={require("../img/01.jpg")}
+          src={require("../img/03.jpg")}
           alt="pic"
         />
         <div className="absolute top-[30%] w-full">
