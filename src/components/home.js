@@ -18,7 +18,7 @@ const Home = () => {
           </h1>
           <SearchBox />
           <div className="flex justify-center mt-10">
-            <button className="px-[40px] py-[7px] bg-transparent border border-gray-300 text-gray-300 rounded-full hover:bg-gray-700 hover:text-white">
+            <button className="ml-3 px-[40px] py-[7px] bg-transparent border border-gray-300 text-gray-300 rounded-full hover:bg-gray-700 hover:text-white">
               شروع
             </button>
             <button className="ml-5 px-[40px] py-[7px] bg-transparent border border-gray-300 text-gray-300 rounded-full hover:bg-gray-700 hover:text-white">
