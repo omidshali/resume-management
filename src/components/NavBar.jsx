@@ -10,28 +10,28 @@ const NavBar = () => {
         <div
           className={
             visibleMenu
-              ? "bg-slate-700  w-[100%] h-[100vh] absolute text-[20px] text-center text-white px-8 py-10 flex flex-col justify-between md:hidden "
+              ? "bg-slate-700  w-[100%] h-[100vh] absolute text-[20px] text-center text-white px-8 py-10 flex flex-col justify-between md:hidden  "
               : "hidden"
           }
         >
           <ul className="flex flex-col justify-center">
-            <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
               خانه
             </li>
 
-            <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
               رزومه ها
             </li>
-            <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
               رزومه ساز
             </li>
-            <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
               جستجوی پیشرفته
             </li>
-            <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
               درباره ما
             </li>
-            <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            <li className="border-b  py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
               درباره ما
             </li>
           </ul>
@@ -40,7 +40,13 @@ const NavBar = () => {
           </button>
         </div>
 
-        <div className="md:hidden flex items-center justify-between p-2 bg-slate-700 text-white ">
+        <div
+          className={
+            !visibleMenu
+              ? "md:hidden flex items-center justify-between p-2 bg-slate-700 text-white opacity-50 "
+              : "hidden"
+          }
+        >
           <button
             onClick={() => setVisibleMenu(true)}
             className="border p-2 rounded-md border-white "
@@ -53,7 +59,7 @@ const NavBar = () => {
           </div>
         </div>
 
-        <div className="md:flex md:justify-between md:py-2 bg-slate-700 md:px-10 items-center hidden opacity-50 ">
+        <div className="md:flex md:justify-between md:py-2 bg-slate-700 md:px-10 items-center hidden opacity-50  ">
           <div className="flex text-white lg:text-[14px] items-center text-[10px]">
             <div className="flex items-center">
               <h1 className="mr-1">ورود</h1>
