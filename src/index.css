@@ -4,10 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  direction: rtl;
+}
 
 @layer base {
-    html {
-       
-        @apply font-Cairo
-    }
+  html {
+    @apply font-Cairo;
+  }
 }
