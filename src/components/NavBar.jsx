@@ -5,11 +5,43 @@ import SvgButton from "./UI/SvgButton";
 const NavBar = () => {
   const [visibleMenu, setVisibleMenu] = useState(false);
   return (
-    <div>
-      <div className="bg-red-500 w-[100%] h-2">ss</div>
+    <div className="relative">
+      <div
+        className={
+          visibleMenu
+            ? "bg-slate-700 w-[100%] h-[100vh] absolute text-[20px] text-center text-white px-8 py-10 flex flex-col justify-between md:hidden "
+            : "hidden"
+        }
+      >
+        <ul className="flex flex-col justify-center">
+          <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            خانه
+          </li>
+
+          <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            رزومه ها
+          </li>
+          <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            رزومه ساز
+          </li>
+          <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            جستجوی پیشرفته
+          </li>
+          <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            درباره ما
+          </li>
+          <li className="border rounded-lg py-[6px] hover:bg-gray-400 hover:text-black hover:border-none my-2 ">
+            درباره ما
+          </li>
+        </ul>
+        <button className="border py-2 rounded-lg" onClick={() => setVisibleMenu(false)}>بستن</button>
+      </div>
 
       <div className="md:hidden flex items-center justify-between p-2 bg-slate-700 text-white">
-        <button className="border p-2 rounded-md border-white ">
+        <button
+          onClick={() => setVisibleMenu(true)}
+          className="border p-2 rounded-md border-white "
+        >
           <SvgButton data="M4 6h16M4 12h16M4 18h16" />
         </button>
         <div className="flex items-center">
