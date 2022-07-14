@@ -53,7 +53,7 @@ const NavBar = () => {
           </div>
         </div>
 
-        <div className="md:flex md:justify-between md:py-2 bg-slate-700 md:px-10 items-center hidden opacity-20 ">
+        <div className="md:flex md:justify-between md:py-2 bg-slate-700 md:px-10 items-center hidden opacity-50 ">
           <div className="flex text-white lg:text-[14px] items-center text-[10px]">
             <div className="flex items-center">
               <h1 className="mr-1">ورود</h1>
