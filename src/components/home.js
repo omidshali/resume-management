@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./NavBar";
+import { NavLink } from "react-router-dom";
 import SearchBox from "./UI/SearchBox";
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
                 شروع
               </button>
               <button className="ml-5 px-[40px] py-[7px] bg-transparent border border-gray-300 text-gray-300 rounded-full hover:bg-gray-700 hover:text-white">
-                رزومه ها
+                <NavLink to="resumes">رزومه ها</NavLink>
               </button>
             </div>
           </div>
