@@ -45,9 +45,7 @@ const InformationCard = () => {
         <button className=" bg-[#00c2cc] text-[#27163a]  py-1 px-2 rounded-md hover:bg-transparent hover:border hover:text-white  ml-2">
           دنبال کردن
         </button>
-        <button className=" bg-[#00c2cc] text-[#27163a]  py-1 px-2 rounded-md hover:bg-transparent hover:border hover:text-white  ml-2">
-          پشننیدن
-        </button>
+        
       </div>
       <div className="flex justify-between mt-2">
         <div className="mx-3">
